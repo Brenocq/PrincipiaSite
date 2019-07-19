@@ -30,7 +30,7 @@ Version: 1.0
 /* ---------------------------------------------- */
 
 body,
-.services-item p{
+.groups-item p{
 	color: #999;
 }
 
@@ -48,7 +48,7 @@ a:hover,
 a:focus,
 .highlight,
 .navbar-custom a,
-.services-item i,
+.groups-item i,
 .client-info h4,
 blockquote {
     color: #197cd9; /* Primary color */
@@ -56,7 +56,7 @@ blockquote {
 
 .pace .pace-progress,
 .overlay,
-.products-container span.icon,
+.services-container span.icon,
 .full-project,
 .project-navigation a:hover,
 .our-clients,
@@ -72,7 +72,7 @@ blockquote {
 }
 
 
-.services-item:before {
+.groups-item:before {
     border-bottom-color: #197cd9; /* Primary color */
     border-left-color: #197cd9; /* Primary color */
 }
@@ -150,7 +150,7 @@ blockquote {
 .carousel-control.left:hover,
 .carousel-control.right:hover,
 .team-member figure:hover figcaption,
-.services-item:hover,
+.groups-item:hover,
 #cd-zoom-in, #cd-zoom-out{
 	background-color: rgba(25,124,217, 0.9); /* RGBA of Primary color - opacity .9 */
 }

@@ -54,7 +54,7 @@ $(function() {
         //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
 
         $('#parallax-slide').parallax("50%", 0.1);
-        $('#products').parallax("50%", 0.1);
+        $('#services').parallax("50%", 0.1);
         $('#portfolio').parallax("50%", 0.1);
         $('#page-aboutus').parallax("50%", 0.1);
     }
@@ -266,7 +266,7 @@ $(function() {
             stylers: [{
                 saturation: saturation_value
             }]
-        }, { //poi stands for point of interest - don't show these lables on the map
+        }, { //poi stands for point of interest - don't show these lables on the map 
             featureType: "poi",
             elementType: "labels",
             stylers: [{
@@ -463,7 +463,7 @@ $(function() {
         }
         //inizialize the map
     var map = new google.maps.Map(document.getElementById('google-container'), map_options);
-    //add a custom marker to the map
+    //add a custom marker to the map                
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(latitude, longitude),
         map: map,
@@ -473,7 +473,7 @@ $(function() {
 
     //add custom buttons for the zoom-in/zoom-out on the map
     function CustomZoomControl(controlDiv, map) {
-        //grap the zoom elements from the DOM and insert them in the map
+        //grap the zoom elements from the DOM and insert them in the map 
         var controlUIzoomIn = document.getElementById('cd-zoom-in'),
             controlUIzoomOut = document.getElementById('cd-zoom-out');
         controlDiv.appendChild(controlUIzoomIn);
@@ -550,28 +550,28 @@ $(function() {
         },
         messages: {
             name: {
-                required: "Por favor, insira seu nome",
-                minlength: "Mínimo de 2 caracteres",
-                lettersonly: "Apenas letras, por favor"
+                required: "Please enter your name",
+                minlength: "Minimum 2 characters",
+                lettersonly: "Only letters please!"
             },
             email: {
-                required: "Por favor, insira seu email",
-                minlength: "Mínimo de 6 caracteres",
-                email: "Este não é um email válido"
+                required: "Please enter your email address",
+                minlength: "Minimum 6 characters",
+                email: "That's an invalid email"
             },
             phone: {
-                required: "Por favor, insira seu número de telefone",
-                digits: "Apenas dígitos (sem espaço)",
-                minlength: "Mínimo de 10 caracteres",
-                maxlength: "Mínimo de 15 caracteres"
+                required: "Please enter your phone number",
+                digits: "Only digits (no spaces)",
+                minlength: "Minimum 10 characters",
+                maxlength: "Maximum 15 characters"
             },
             message: {
-                required: "Por favor, insira uma mensagem",
-                minlength: "Mínimo de 6 caracteres"
+                required: "Please enter your message",
+                minlength: "Minimum 6 characters"
             }
         },
         success: function(label) {
-            label.addClass("valid").text("Perfeito!");
+            label.addClass("valid").text("Perfect!");
         },
         submitHandler: function(element) {
 

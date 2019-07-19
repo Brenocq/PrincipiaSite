@@ -41,8 +41,8 @@ Version: 1.0
 5:  Page sections (sections included in the navigation)
     5.1:    Hero Unit (Main slider)
     5.2:    About section ("About us")
-    5.3:    Services section ("What we do")
-    5.4:    Products section ("Why choose us")
+    5.3:    groups section ("What we do")
+    5.4:    services section ("Why choose us")
     5.5:    Team section 
     5.6:    Portfolio section
     5.7:    Clients section
@@ -755,10 +755,10 @@ video {
 }
 
 
-/*      5.3: Services section ("What we do")
+/*      5.3: groups section ("What we do")
 /* ---------------------------------------------- */
 
-.services-item:before {
+.groups-item:before {
     content: "";
     position: absolute;
     top: 0;
@@ -778,7 +778,7 @@ video {
 }
 
 
-.services-item{
+.groups-item{
     background: #f9f9f9;
     padding: 30px 20px 20px;
     margin: 15px 0;
@@ -790,7 +790,7 @@ video {
              transition: background .5s ease-in-out;
 }
 
-.services-item h4{
+.groups-item h4{
     margin: 0 0 10px 0;
     padding: 0;
     font-size: 20px;
@@ -801,7 +801,7 @@ video {
 }
 
 
-.services-item p{
+.groups-item p{
     padding: 0;
     margin: 0;
     color:#999;
@@ -812,7 +812,7 @@ video {
 }
 
 
-.services-item i{
+.groups-item i{
     color: rgba(254,82,76, 1); /* Primary color, can be changed via colors.css */
     padding: 0;
     margin: 0 0 10px 0;
@@ -821,7 +821,7 @@ video {
              transition: all .2s ease-in-out;
 }
 
-.services-item:hover{
+.groups-item:hover{
     background:rgba(254,82,76, 1); /* Primary color, can be changed via colors.css */
      -webkit-transition: background .2s ease-in-out;
         -moz-transition: background .2s ease-in-out;
@@ -829,7 +829,7 @@ video {
 }
 
 
-.services-item:hover h4{
+.groups-item:hover h4{
     color:#fff;
             transform: translate(0,-5px);
      -webkit-transform: translate(0,-5px);
@@ -840,7 +840,7 @@ video {
              transition: all .3s ease-in-out;
 }
 
-.services-item:hover p{
+.groups-item:hover p{
     color:#fff;
             transform: translate(0,-10px);
      -webkit-transform: translate(0,-10px);
@@ -851,7 +851,7 @@ video {
              transition: all .2s ease-in-out;
 }
 
-.services-item:hover i{
+.groups-item:hover i{
     color:#fff;
             transform: translate(0,-5px);
      -webkit-transform: translate(0,-5px);
@@ -862,7 +862,7 @@ video {
              transition: all .2s ease-in-out;
 }
 
-.services-item:hover:before{
+.groups-item:hover:before{
     border-color: #fff #fff #a5a5a5 #a5a5a5;
     -webkit-transition: border-color .2s ease-in-out;
        -moz-transition: border-color .2s ease-in-out;
@@ -870,10 +870,10 @@ video {
 }
 
 
-/*       5.4: Products section ("Why choose us")
+/*       5.4: services section ("Why choose us")
 /* ---------------------------------------------- */
 
-.products{
+.services{
     width: 100%;
     text-shadow: #000 1px 1px 2px;
     background: #222;
@@ -884,11 +884,11 @@ video {
          -o-background-size: cover;
 }
 
-.products-container p{
+.services-container p{
     color:#fff;
 }
 
-.products-container span.icon{
+.services-container span.icon{
     display: inline-block;  
     padding: 18px;
     margin: 0 0 22px 0;
@@ -1929,7 +1929,7 @@ footer .social a{
         margin:0%;
     }
 
-    .products{
+    .services{
         text-align: left;
     }
 
