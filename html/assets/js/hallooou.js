@@ -551,8 +551,8 @@ $(function() {
         messages: {
             name: {
               required: "Por favor, insira seu nome",
-minlength: "Mínimo de 2 caracteres",
-lettersonly: "Apenas letras, por favor"
+              minlength: "Mínimo de 2 caracteres",
+              lettersonly: "Apenas letras, por favor"
             },
             email: {
               required: "Por favor, insira seu email",
