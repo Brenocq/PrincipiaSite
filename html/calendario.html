@@ -19,7 +19,6 @@
     <link href="assets/css/colors.css" rel="stylesheet">
     <link href="assets/css/colorsBlueOrange.css" rel="stylesheet">
 
-
     <!-- Plugin stylesheets -->
     <link href="assets/css/plugins/owl.carousel.css" rel="stylesheet">
     <link href="assets/css/plugins/owl.theme.css" rel="stylesheet">
@@ -35,6 +34,13 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:100,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 
+    <!-- Full Calendar -->
+    <link href='assets/fullcalendar/core/main.css' rel='stylesheet' />
+    <link href='assets/fullcalendar/daygrid/main.css' rel='stylesheet' />
+    <script src='assets/fullcalendar/core/main.js'></script>
+    <script src='assets/fullcalendar/core/locales/pt-br.js'></script>
+    <script src='assets/fullcalendar/daygrid/main.js'></script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -44,6 +50,36 @@
         document.createElement('video');
       </script>
     <![endif]-->
+
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          locale: 'pt-br',
+          plugins: [ 'dayGrid' ],
+          defaultView: 'dayGridMonth', /*dayGridWeek*/
+          events: [
+            {
+              title: 'Aula: Água Vermelha',
+              startRecur: '2019-08-01',
+              endRecur: '2019-12-07',
+              daysOfWeek: [4]
+            },
+            {
+              title: 'Aula: Álvaro Guião',
+              startRecur: '2019-08-01',
+              endRecur: '2019-12-07',
+              daysOfWeek: [3,5]
+            }
+          ]
+        });
+
+        calendar.render();
+      });
+
+    </script>
 
 </head>
 
@@ -83,21 +119,20 @@
 
 
     <!-- Calendar section -->
-    <section id="calendar" class="content-section no-bottom-pad">
+    <section class="content-section no-bottom-pad">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12">
                     <h2>Nosso calendário</h2>
                     <h3 class="caption highlightO">Aqui você pode ver nosso cronograma de atividades para participar com a gente!</h3>
                 </div><!-- /.col-md-12 -->
-
             </div><!-- /.row -->
         </div><!-- /.container -->
 
         <div class="container">
             <div class="row form-container">
                 <div class="col-md-12 ">
-                  BATATA
+                  <div id='calendar'></div>
                 </div><!-- /.contact-form -->
             </div><!-- /.row -->
         </div><!-- /.container -->
