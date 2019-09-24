@@ -39,6 +39,7 @@
     <link href='assets/fullcalendar/daygrid/main.css' rel='stylesheet' />
     <script src='assets/fullcalendar/core/main.js'></script>
     <script src='assets/fullcalendar/core/locales/pt-br.js'></script>
+    <script src='assets/fullcalendar/interaction/main.js'></script>
     <script src='assets/fullcalendar/daygrid/main.js'></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -58,8 +59,9 @@
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
           locale: 'pt-br',
-          plugins: [ 'dayGrid' ],
+          plugins: [ 'interaction', 'dayGrid' ],
           defaultView: 'dayGridMonth', /*dayGridWeek*/
+          selectable: true,
           events: [
             {
               title: 'Aula: Água Vermelha',
@@ -73,7 +75,11 @@
               endRecur: '2019-12-07',
               daysOfWeek: [3,5]
             }
-          ]
+          ],
+          dateClick: function(info) {
+            alert('Date: ' + info.dateStr);
+            alert('Resource ID: ' + info.resource.id);
+            }   
         });
 
         calendar.render();
